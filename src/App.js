@@ -35,11 +35,21 @@ class App extends Component{
     return (
       //반드시 하나의 태그 안쪽에 나머지 태그들이 있어야 함(가장 바깥쪽에는 태그 하나만)
       <div className="App">
-        <Subject 
+        {/* <Subject 
           title={this.state.subject.title} 
           sub={this.state.subject.sub}>
-        </Subject>
-        <Subject title="React" sub="For UI"></Subject>
+        </Subject> */}
+        <header>
+          <h1><a href="/" onClick={function(e){
+            console.log(e);
+            e.preventDefault();//이벤트가 가지고 있는 기본적인 동작방법을 못하게 할 때 사용
+            //this.state.mode = 'welcome'; //이렇게 사용하면 react는 state가 변경되었다는 것을 모름
+            this.setState({
+              mode:'welcome'
+            });
+          }.bind(this)}>{this.state.subject.title}</a></h1>
+          {this.state.subject.sub}
+        </header>
         <TOC data={this.state.contents}></TOC>
         <Content title={_title} desc={_desc}></Content>
       </div>
