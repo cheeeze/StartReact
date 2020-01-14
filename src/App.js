@@ -1,6 +1,56 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+class Subject extends Component{
+  render(){
+    return (
+      <header>
+        <h1>WEB</h1>
+        world wide web!
+      </header>
+    );
+  }
+}
+
+class TOC extends Component{
+  render(){
+    return(
+      <nav>
+        <ul>
+          <li><a href="1.html">HTML</a></li>
+          <li><a href="2.html">CSS</a></li>
+          <li><a href="3.html">JavaScript</a></li>
+        </ul>
+      </nav>
+    );
+  }
+}
+
+class Content extends Component{
+  render(){
+    return(
+      <article>
+        <h2>HTML</h2>
+        HTML is Hyper Text Markup Language.
+      </article>
+    );
+  }
+}
+
+//class type
+class App extends Component{
+  render(){
+    return (
+      //반드시 하나의 태그 안쪽에 나머지 태그들이 있어야 함(가장 바깥쪽에는 태그 하나만)
+      <div className="App">
+        <Subject></Subject>
+        <TOC></TOC>
+        <Content></Content>
+      </div>
+    );
+  }
+}
+
 
 //기본으로 생성된 function type
 /*function App() {
@@ -23,17 +73,5 @@ import './App.css';
     </div>
   );
 }*/
-
-//class type
-class App extends Component{
-  render(){
-    return (
-      //반드시 하나의 태그 안쪽에 나머지 태그들이 있어야 함(가장 바깥쪽에는 태그 하나만)
-      <div className="App">
-        Hello, React!!!
-      </div>
-    );
-  }
-}
 
 export default App;
