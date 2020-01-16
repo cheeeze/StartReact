@@ -7,6 +7,7 @@ import Subject from "./components/Subject";
 import Control from "./components/Control";
 import './App.css';
 
+import RoutingHome from "./routing/RoutingHome";
 
 
 //class type
@@ -86,6 +87,8 @@ getContent(){
     return (
       //반드시 하나의 태그 안쪽에 나머지 태그들이 있어야 함(가장 바깥쪽에는 태그 하나만)
       <div className="App">
+        <RoutingHome></RoutingHome>
+        <hr/>
         <Subject 
           title={this.state.subject.title} 
           sub={this.state.subject.sub}
