@@ -32,7 +32,6 @@ getReadContent(){
         var data = this.state.contents[i];
         if(data.id === this.state.selected_content_id){
            return data;
-           break;
         }
         i=i+1;
       }
